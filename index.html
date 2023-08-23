@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Website OU</title>
+    <link href="images/Logo.png" rel="shortcut icon">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+   
+</head>
+
+<body>
+    <a href="javascript:;" id="go">
+        <i class="fa-solid fa-arrow-turn-up fa-xl"></i>
+    </a>
+    <section class="header">
+        <nav id="menu">
+            <a href="index.html"><img src="images/Logo.png"></a>
+            <div class="nav-links" id="navLinks">
+                <i class="fa-solid fa-times" onclick="hideMenu()"></i>
+                <ul>
+                    <li><a href="index.html" class="a">Trang chủ</a></li>
+                    <li><a href="scorestudent.html">QL Điểm</a></li>
+                    <li><a href="registerCourse.html">ĐK HP</a></li>
+                    <li><a href="blog.html">BLOG</a></li>
+                    <li><a href="contact.html">Liên Hệ</a></li>
+                    <li><button class="buttonLogin">Đăng nhập</button></li>
+                </ul>
+            </div>
+            <i class="fa-solid fa-bars" onclick="showMenu()"></i>
+        </nav>
+        <div class="text-box">
+            <h1>Trường đại học Mở TPHCM</h1>
+            <p> 	Cơ hội học tập cho mọi người </p>
+            <a href="" class="hero-btn">Gia nhập cùng chúng tôi để biết thêm</a>
+        </div>
+    </section>
+    <!----->
+    <section>
+        <div class="blur-bg-overlay"></div>
+        <div class="form-popup">
+            <span class="close-btn material-symbols-rounded">X</span>
+            <div class="form-box">
+                <div class="form-details">
+                    <h2>Chào mừng bạn đến với Website</h2>
+                    <p>Vui lòng đăng nhập để sử dụng dịch vụ</p>
+                </div>
+
+                <div class="form-content">
+                    <h2>Đăng nhập</h2>
+                    <form action="#" onsubmit="login()">
+                        <div class="input-field">
+                            <input type="text" required id="ms">
+                            <label>Tài khoản</label>
+                        </div>
+                        <div class="input-field">
+                            <input type="password" required id="pw">
+                            <label>Mật Khẩu</label>
+                        </div>
+                        <a href="#" class="forgot-pass">Quên mật khẩu?</a>
+                        <button type="submit">Đăng nhập</button>
+                    </form>
+                    <div class="bottom-link">Không nhớ tài khoản?
+                        <a href="#">Liên hệ phòng quản lý đào tạo</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="course">
+        <h1>Môn học chúng tôi đề cử cho bạn</h1>
+        <p>Tri thức là sức mạnh.</p>
+        <div class="row">
+            <div class="course-col">
+                <h3>   Ngành Quản trị kinh doanh</h3>
+                <p>Chuyên ngành Du lịch<br>Chuyên ngành Quản trị Marketing<br>Chuyên ngành Quản trị nhân lực<br>Chuyên ngành Kinh doanh quốc tế</p>
+            </div>
+            <div class="course-col">
+                <h3>Ngành ngôn ngữ anh</h3>
+                <p>Chuyên ngành Phương pháp Giảng dạy Tiếng Anh<br>Chuyên ngành Giảng dạy Anh văn thiếu nhi<br>Chuyên ngành Biên phiên dịch</p>
+            </div>
+            <div class="course-col">
+                <h3>Ngành công nghệ thông tin</h3>
+                <p>Chuyên ngành công nghệ thông tin<br>Chuyên ngành khoa học máy tính<br>Chuyên ngành hệ thống thông tin quản lý</p>
+            </div>
+        </div>
+    </section>
+    <!----->
+    <section class="campus">
+        <h1>Các cơ sở của chúng tôi</h1>
+        <p>Chúng tôi có 4 cơ sở khắp TPHCM và 1 vài cơ sở tỉnh lân cận. </p>
+        <div class="row">
+            <div class="campus-col">
+                <img src="images/VVT.png">
+                <div class="layer">
+                    <h3>Cơ sở Võ Văn Tần</h3>
+                </div>
+            </div>
+            <div class="campus-col">
+                <img src="images/NK.png">
+                <div class="layer">
+                    <h3>Cơ sở Nguyễn Kiệm</h3>
+                </div>
+            </div>
+            <div class="campus-col">
+                <img src="images/HHH.png">
+                <div class="layer">
+                    <h3>Cơ sở Hồ Hảo Hớn</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!----->
+    <section class="facilities">
+        <h1>Cơ sở vật chất</h1>
+        <p>Trường có đầy đủ các cơ sở vật chất</p>
+        <div class="row">
+            <div class="facilities-col">
+                <img src="images/LBT.png">
+                <h3>Khu vực học quân sự rộng rãi thoáng mat</h3>
+                <p>Trường có chỗ học quân sự độc đáo, công trình xây dựng trường đại học hiện đại theo chuẩn quốc tế.
+                </p>
+            </div>
+            <div class="facilities-col">
+                <img src="images/TV.png">
+                <h3>Thư viện</h3>
+                <p>Thư viện rộng rãi, thoáng mát, thích hợp cho việc học tập. Có đầy đủ các tài liệu nghiên cứu.</p>
+            </div>
+            <div class="facilities-col">
+                <img src="images/TOD.png">
+                <h3>Có sân chơi rộng rãi</h3>
+                <p>Thích hợp cho việc tổ chức các sự kiện hoặc sử dụng làm sân tập võ cho các môn giáo dục thể chất.</p>
+            </div>
+        </div>
+    </section>
+    <!--Call to Action--->
+    <section class="cta">
+        <h1>Liên hệ chúng tôi để tham gia học tập tại trường chúng tôi.</h1>
+        <a href="contact.html" class="hero-btn">Liên hệ ngay</a>
+    </section>
+
+    <!--footer--->
+    <section class="footer">
+        <h4>About Us</h4>
+
+
+        <div class="icons">
+            <i class="fa-brands fa-facebook-f"></i>
+            <i class="fa-brands fa-instagram"></i>
+        </div>
+        <p>Sú Lê Lâm Thanh 2051052121</p>
+    </section>
+</body>
+<script src="js/index.js"></script>
+<script src="js/default.js"></script>
+</html>

@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="utf-8">
+    <link href="images/Logo.png" rel="shortcut icon">
+    <title>Quản lý điểm sinh viên</title>
+    <link rel="stylesheet" href="css/default.css">
+    <link rel="stylesheet" type="text/css" href="css/style-scoreStudent.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+
+    <script src="https://cdn.jsdelivr.net/npm/lodash@4.17.21/lodash.min.js"></script>
+
+</head>
+
+<body>
+    <a href="javascript:;" id="go">
+        <i class="fa-solid fa-arrow-turn-up fa-xl"></i>
+    </a>
+    <section class="header">
+        <nav id="menu">
+            <a href="index.html"><img src="images/Logo.png"></a>
+            <div class="nav-links" id="navLinks">
+                <i class="fa-solid fa-times" onclick="hideMenu()"></i>
+                <ul>
+                    <li><a href="index.html" class="a">Trang chủ</a></li>
+                    <li><a href="scorestudent.html">QL Điểm</a></li>
+                    <li><a href="registerCourse.html">ĐK HP</a></li>
+                    <li><a href="blog.html">BLOG</a></li>
+                    <li><a href="contact.html">Liên Hệ</a></li>
+                    <li><button class="buttonLogin">Đăng nhập</button></li>
+                </ul>
+            </div>
+            <i class="fa-solid fa-bars" onclick="showMenu()"></i>
+        </nav>
+        <div class="text-box">
+            <h1>Quản lý điểm sinh viên</h1>
+
+        </div>
+    </section>
+    <section>
+        <div class="blur-bg-overlay"></div>
+        <div class="form-popup">
+            <span class="close-btn material-symbols-rounded">X</span>
+            <div class="form-box">
+                <div class="form-details">
+                    <h2>Chào mừng bạn đến với Website</h2>
+                    <p>Vui lòng đăng nhập để sử dụng dịch vụ</p>
+                </div>
+
+                <div class="form-content">
+                    <h2>Đăng nhập</h2>
+                    <form action="#" onsubmit="login()">
+                        <div class="input-field">
+                            <input type="text" required id="ms">
+                            <label>Tài khoản</label>
+                        </div>
+                        <div class="input-field">
+                            <input type="password" required id="pw">
+                            <label>Mật Khẩu</label>
+                        </div>
+                        <a href="#" class="forgot-pass">Quên mật khẩu?</a>
+                        <button type="submit">Đăng nhập</button>
+                    </form>
+                    <div class="bottom-link">Không nhớ tài khoản?
+                        <a href="#">Liên hệ phòng quản lý đào tạo</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <div class="searchInput">
+        <input type="text" id="searchInput" placeholder="Tìm ..." title="Type in a name">
+        <br>
+        <button onclick="filterTable()">Tìm kiếm</button><button onclick="searchReset()">Reset</button>
+    </div>
+    <table id="dataTable">
+        <tr>
+            <td>
+                <form autocomplete="off" onsubmit="onFormSubmit()">
+                    <div class="box">
+                        <label for="mssv">MSSV</label>
+                        <input type="text" name="mssv" id="mssv" required>
+                        <span id="mssv-error" class="error"></span>
+                    </div>
+                    <div>
+                        <label for="nameSubject">Tên môn học</label>
+                        <input type="text" name="nameSubject" id="nameSubject" required>
+                        <span id="nameSubject-error" class="error"></span>
+                    </div>
+                    <div>
+                        <label for="scoreGK">Điểm giữa kỳ</label>
+                        <input type="number" name="scoreGK" id="scoreGK" min="0" max="10" required>
+                        <span id="scoreGK-error" class="error"></span>
+                    </div>
+                    <div>
+                        <label for="scoreCK">Điểm cuối kỳ</label>
+                        <input type="number" name="scoreCK" id="scoreCK" min="0" max="10" required>
+                        <span id="scoreCK-error" class="error"></span>
+                    </div>
+                    <div class="form_action--button">
+                        <input type="submit" value="Nhập">
+                        <input type="reset" value="Reset">
+                    </div>
+                </form>
+
+            <td>
+                <table class="list" id="scoreList">
+                    <thead>
+                        <tr>
+                            <th>MSSV</th>
+                            <th>Tên môn học</th>
+                            <th>Điểm giữa kỳ</th>
+                            <th>Điểm cuối kỳ</th>
+                            <th>Điểm hệ 10</th>
+                            <th>Điểm hệ 4</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+
+                    </tbody>
+                </table>
+            </td>
+            </td>
+        </tr>
+    </table>
+    <section class="footer">
+        <h4>About Us</h4>
+
+
+        <div class="icons">
+            <i class="fa-brands fa-facebook-f"></i>
+            <i class="fa-brands fa-instagram"></i>
+        </div>
+        <p>Sú Lê Lâm Thanh 2051052121</p>
+    </section>
+</body>
+<script src="js/scorestudent.js"></script>
+<script src="js/default.js"></script>
+
+</html>

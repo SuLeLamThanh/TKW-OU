@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="images/Logo.png" rel="shortcut icon">
+    <title>Đăng ký học phần</title>
+    <link rel="stylesheet" type="text/css" href="css/style-course.css">
+    <link rel="stylesheet" href="css/default.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+</head>
+
+<body>
+    <a href="javascript:;" id="go">
+        <i class="fa-solid fa-arrow-turn-up fa-xl"></i>
+    </a>
+    <section class="header">
+        <nav id="menu">
+            <a href="index.html"><img src="images/Logo.png"></a>
+            <div class="nav-links" id="navLinks">
+                <i class="fa-solid fa-times" onclick="hideMenu()"></i>
+                <ul>
+                    <li><a href="index.html" class="a">Trang chủ</a></li>
+                    <li><a href="scorestudent.html">QL Điểm</a></li>
+                    <li><a href="registerCourse.html">ĐK HP</a></li>
+                    <li><a href="blog.html">BLOG</a></li>
+                    <li><a href="contact.html">Liên Hệ</a></li>
+                    <li><button class="buttonLogin">Đăng nhập</button></li>
+                </ul>
+            </div>
+            <i class="fa-solid fa-bars" onclick="showMenu()"></i>
+        </nav>
+        <div class="text-box">
+            <h1>Đăng ký học phần</h1>
+        </div>
+    </section>
+    <!----->
+    <section>
+        <div class="blur-bg-overlay"></div>
+        <div class="form-popup">
+            <span class="close-btn material-symbols-rounded">X</span>
+            <div class="form-box">
+                <div class="form-details">
+                    <h2>Chào mừng bạn đến với Website</h2>
+                    <p>Vui lòng đăng nhập để sử dụng dịch vụ</p>
+                </div>
+
+                <div class="form-content">
+                    <h2>Đăng nhập</h2>
+                    <form action="#" onsubmit="login()">
+                        <div class="input-field">
+                            <input type="text" required id="ms">
+                            <label>Tài khoản</label>
+                        </div>
+                        <div class="input-field">
+                            <input type="password" required id="pw">
+                            <label>Mật Khẩu</label>
+                        </div>
+                        <a href="#" class="forgot-pass">Quên mật khẩu?</a>
+                        <button type="submit">Đăng nhập</button>
+                    </form>
+                    <div class="bottom-link">Không nhớ tài khoản?
+                        <a href="#">Liên hệ phòng quản lý đào tạo</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <div id="find">
+        <input type="text" id="searchInput" placeholder="Tìm ..." title="Type in a name">
+        <br>
+        <button onclick="filterTable()">Tìm</button><button onclick="searchReset()">Reset</button>
+    </div>
+    <ul class="showcase">
+        <li>
+            <div class="course"></div>
+            <small>Còn trống</small>
+        </li>
+        <li>
+            <div class="course selected"></div>
+            <small>Đã đăng ký</small>
+        </li>
+        <li>
+            <div class="course noSlot"></div>
+            <small>Đã đủ số lượng đăng ký</small>
+        </li>
+    </ul>
+    <div class="course-container">
+        <div class="menu">
+            <select id="course">
+                <option value="2000000">Danh sách môn học cơ bản</option>
+                <option value="4000000">Danh sách môn học chất lượng cao</option>
+            </select>
+        </div>
+    </div>
+    <div class="container">
+        <div id="2000000" class="data table">
+            <table class="list" id="dataTable">
+                <thead>
+                    <tr>
+
+                        <th>STT</th>
+                        <th>Tên môn học</th>
+                        <th>Mã môn học</th>
+                        <th>Số tín chỉ</th>
+                        <th>Giảng viên</th>
+                        <th>Ngày bắt đầu</th>
+                        <th>Ngày kết thúc</th>
+                        <th>Phòng</th>
+                        <th>Số tiết</th>
+                        <th>Số lượng còn lại</th>
+                        <th>Thao tác</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <div>
+                        <th>1</th>
+                        <th><span id="name1">Thiết kế Web</span></th>
+                        <th><span id="id1">TKW101</span></th>
+                        <th><span id="number1">3</span></th>
+                        <th><span id="teacher1">Dương Hữu Thành</span></th>
+                        <th><span id="timestart1">06/06/2023</span></th>
+                        <th><span id="timeend1">06/10/2023</span></th>
+                        <th><span id="room1">301</span></th>
+                        <th><span id="soTiet1">30</span></th>
+                        <th><span id="slot1" class="slot">65</span></th>
+                        <th><button value="Đăng ký" onclick="register()" class="button course ">Đăng ký</button></th>
+                    </div>
+                </tbody>
+                <tbody>
+                    <div>
+                        <th>2</th>
+                        <th><span id="name2">Công nghệ phần mềm</span></th>
+                        <th><span id="id2">CNPM101</span></th>
+                        <th><span id="number2">3</span></th>
+                        <th><span id="teacher2">Dương Hữu Thành</span></th>
+                        <th><span id="timestart2">07/06/2023</span></th>
+                        <th><span id="timeend2">07/10/2023</span></th>
+                        <th><span id="room2">301</span></th>
+                        <th><span id="soTiet2">30</span></th>
+                        <th><span id="slot2" class="slot">5</span></th>
+                        <th><button value="Đăng ký" onclick="register1()" class="button course">Đăng ký</button></th>
+                    </div>
+                </tbody>
+                <tbody>
+                    <div>
+                        <th>3</th>
+                        <th><span id="name3">Lập trình Java</span></th>
+                        <th><span id="id3">LTJV101</span></th>
+                        <th><span id="number3">4</span></th>
+                        <th><span id="teacher3">Dương Hữu Thành</span></th>
+                        <th><span id="timestart3">08/06/2023</span></th>
+                        <th><span id="timeend3">08/10/2023</span></th>
+                        <th><span id="room3">201</span></th>
+                        <th><span id="soTiet3">45</span></th>
+                        <th><span id="slot3" class="slot">0</span></th>
+                        <th><button value="Đăng ký" onclick="register2()" class="button course noSlot" disabled>Đăng
+                                ký</button></th>
+                    </div>
+                </tbody>
+                <tbody>
+                    <div>
+                        <th>4</th>
+                        <th><span id="name4">Lập trình Java</span></th>
+                        <th><span id="id4">LTJV101</span></th>
+                        <th><span id="number4">4</span></th>
+                        <th><span id="teacher4">Dương Hữu Thành</span></th>
+                        <th><span id="timestart4">08/06/2023</span></th>
+                        <th><span id="timeend4">08/10/2023</span></th>
+                        <th><span id="room4">201</span></th>
+                        <th><span id="soTiet4">45</span></th>
+                        <th><span id="slot4" class="slot">25</span></th>
+                        <th><button value="Đăng ký" onclick="register3()" id="abcdfer" class="button course">Đăng
+                                ký</button></th>
+                    </div>
+                </tbody>
+
+            </table>
+        </div>
+        <div id="4000000" class="data table">
+            <table class="list" id="courseList">
+                <thead>
+                    <tr>
+                        <th>STT</th>
+                        <th>Tên môn học</th>
+                        <th>Mã môn học</th>
+                        <th>Số tín chỉ</th>
+                        <th>Giảng viên</th>
+                        <th>Ngày bắt đầu</th>
+                        <th>Ngày kết thúc</th>
+                        <th>Phòng</th>
+                        <th>Số tiết</th>
+                        <th>Số lượng còn lại</th>
+                        <th>Thao tác</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <div>
+                        <th>1</th>
+                        <th><span id="name1">Thiết kế Web</span></th>
+                        <th><span id="id1">TKW101</span></th>
+                        <th><span id="number1">3</span></th>
+                        <th><span id="teacher1">Dương Hữu Thành</span></th>
+                        <th><span id="timestart1">06/06/2023</span></th>
+                        <th><span id="timeend1">06/10/2023</span></th>
+                        <th><span id="room1">301</span></th>
+                        <th><span id="soTiet1">30</span></th>
+                        <th><span id="slot1" class="slot">65</span></th>
+                        <th><button value="Đăng ký" onclick="register()" class="button course ">Đăng ký</button></th>
+                    </div>
+                </tbody>
+                <tbody>
+                    <div>
+                        <th>2</th>
+                        <th><span id="name2">Công nghệ phần mềm</span></th>
+                        <th><span id="id2">CNPM101</span></th>
+                        <th><span id="number2">3</span></th>
+                        <th><span id="teacher2">Dương Hữu Thành</span></th>
+                        <th><span id="timestart2">07/06/2023</span></th>
+                        <th><span id="timeend2">07/10/2023</span></th>
+                        <th><span id="room2">301</span></th>
+                        <th><span id="soTiet2">30</span></th>
+                        <th><span id="slot2" class="slot">5</span></th>
+                        <th><button value="Đăng ký" onclick="register1()" class="button course">Đăng ký</button></th>
+                    </div>
+                </tbody>
+                <tbody>
+                    <div>
+                        <th>3</th>
+                        <th><span id="name3">Lập trình Java</span></th>
+                        <th><span id="id3">LTJV101</span></th>
+                        <th><span id="number3">4</span></th>
+                        <th><span id="teacher3">Dương Hữu Thành</span></th>
+                        <th><span id="timestart3">08/06/2023</span></th>
+                        <th><span id="timeend3">08/10/2023</span></th>
+                        <th><span id="room3">201</span></th>
+                        <th><span id="soTiet3">45</span></th>
+                        <th><span id="slot3" class="slot">0</span></th>
+                        <th><button value="Đăng ký" onclick="register2()" class="button course noSlot" disabled>Đăng
+                                ký</button></th>
+                    </div>
+                </tbody>
+                <tbody>
+                    <div>
+                        <th>4</th>
+                        <th><span id="name4">Lập trình Java</span></th>
+                        <th><span id="id4">LTJV101</span></th>
+                        <th><span id="number4">4</span></th>
+                        <th><span id="teacher4">Dương Hữu Thành</span></th>
+                        <th><span id="timestart4">08/06/2023</span></th>
+                        <th><span id="timeend4">08/10/2023</span></th>
+                        <th><span id="room4">201</span></th>
+                        <th><span id="soTiet4">45</span></th>
+                        <th><span id="slot4" class="slot">25</span></th>
+                        <th><button value="Đăng ký" onclick="register3()" id="abcdfer" class="button course">Đăng
+                                ký</button></th>
+                    </div>
+                </tbody>
+            </table>
+        </div>
+        <div id="all-course" class="data"></div>
+        <p class="text">
+            Bạn đã đăng ký <span id="count">0</span> môn trong kỳ này.
+            <br>Tổng số tiền học phí là :<span id="total">0</span> VND.
+        </p>
+    </div>
+    </div>
+
+
+    <div class="table">
+        <table class="list" id="course-sign">
+            <thead>
+                <tr>
+                    <th>Tên môn học</th>
+                    <th>Mã môn học</th>
+                    <th>Số tín chỉ</th>
+                    <th>Giảng viên</th>
+                    <th>Ngày bắt đầu</th>
+                    <th>Ngày kết thúc</th>
+                    <th>Phòng</th>
+                    <th>Số tiết</th>
+                    <th>Thao tác</th>
+                </tr>
+            </thead>
+            <tbody>
+            </tbody>
+        </table>
+    </div>
+    <section class="footer">
+        <h4>About Us</h4>
+
+
+        <div class="icons">
+            <i class="fa-brands fa-facebook-f"></i>
+            <i class="fa-brands fa-instagram"></i>
+        </div>
+        <p>Sú Lê Lâm Thanh 2051052121</p>
+    </section>
+</body>
+
+
+<script src="https://cdn.jsdelivr.net/npm/lodash@4.17.21/lodash.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<script src="js/default.js"></script>
+<script src="js/course.js"></script>
+</html>

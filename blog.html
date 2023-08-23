@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="images/Logo.png" rel="shortcut icon">
+    <title>Blog</title>
+    <link rel="stylesheet" type="text/css" href="css/blog.css">
+    <link rel="stylesheet" href="css/default.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+
+</head>
+
+<body>
+    <a href="javascript:;" id="go">
+        <i class="fa-solid fa-arrow-turn-up fa-xl"></i>
+    </a>
+    <section class="header">
+        <nav id="menu">
+            <a href="index.html"><img src="images/Logo.png"></a>
+            <div class="nav-links" id="navLinks">
+                <i class="fa-solid fa-times" onclick="hideMenu()"></i>
+                <ul>
+                    <li><a href="index.html" class="a">Trang chủ</a></li>
+                    <li><a href="scorestudent.html">QL Điểm</a></li>
+                    <li><a href="registerCourse.html">ĐK HP</a></li>
+                    <li><a href="blog.html">BLOG</a></li>
+                    <li><a href="contact.html">Liên Hệ</a></li>
+                    <li><button class="buttonLogin">Đăng nhập</button></li>
+                </ul>
+            </div>
+            <i class="fa-solid fa-bars" onclick="showMenu()"></i>
+        </nav>
+        <div class="text-box">
+            <h1>Blog</h1>
+            
+        </div>
+    </section>
+    <!----->
+    <section>
+        <div class="blur-bg-overlay"></div>
+        <div class="form-popup">
+            <span class="close-btn material-symbols-rounded">X</span>
+            <div class="form-box">
+                <div class="form-details">
+                    <h2>Chào mừng bạn đến với Website</h2>
+                    <p>Vui lòng đăng nhập để sử dụng dịch vụ</p>
+                </div>
+
+                <div class="form-content">
+                    <h2>Đăng nhập</h2>
+                    <form action="#" onsubmit="login()">
+                        <div class="input-field">
+                            <input type="text" required id="ms">
+                            <label>Tài khoản</label>
+                        </div>
+                        <div class="input-field">
+                            <input type="password" required id="pw">
+                            <label>Mật Khẩu</label>
+                        </div>
+                        <a href="#" class="forgot-pass">Quên mật khẩu?</a>
+                        <button type="submit">Đăng nhập</button>
+                    </form>
+                    <div class="bottom-link">Không nhớ tài khoản?
+                        <a href="#">Liên hệ phòng quản lý đào tạo</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+   <section class="blog-content">
+    <div class="row">
+        <div class="blog-left">
+            <img src="images/blog.png">
+            <h2>Chứng nhận </h2>
+            <p>Trường Đại học Mở thành phố Hồ Chí Minh thực hiện giáo dục mở, tạo bình đẳng cho mọi người trong giáo dục đại học, góp phần xây dựng xã hội học tập, nâng cao tri thức và năng lực nghề nghiệp cho người học bằng các phương thức linh hoạt, thuận tiện và hiệu quả.<br>Trường Đại học Mở thành phố Hồ Chí Minh phấn đấu trở thành Đại học thực hiện giáo dục mở, định hướng ứng dụng với chất lượng cao.<br>Sau một thời gian thực hiện tự đánh giá chương trình đào tạo  theo Bộ tiêu chuẩn kiểm định của Bộ Giáo dục và Đào tạo ban hành, Nhà trường đã đăng ký kiểm định chất lượng với Trung tâm kiểm định chất lượng giáo dục - Trường Đại học Mở thành phố Hồ Chí Minh.
+            Giấy chứng nhận Kiểm định chất lượng chính là sự khẳng định chất lượng của Nhà trường về cơ sở vật chất, chương trình đào tạo, đội ngũ giảng viên... đã đạt tiêu chuẩn cao phục vụ cho công tác giảng dạy của trường.</p>
+                <div class="comment-box">
+                    <h3>Để lại bình luận</h3>
+                    <form class="comment-form">
+                        <input type="text" placeholder="Nhập tên">
+                        <input type="text" placeholder="Nhập Email">
+                        <textarea rows="5" placeholder="Bình luận của bạn"></textarea>
+                        <button type="submit" class="hero-btn">Đăng bình luận</button>
+                    </form>
+                </div>
+        </div>
+        <div class="blog-right">
+            <h3>Mục lục</h3>
+            <div>
+                <span>Quản trị kinh doanh</span>
+                <span>21</span>
+            </div>
+            <div>
+                <span>Công nghệ thông tin</span>
+                <span>28</span>
+            </div>
+            <div>
+                <span>Khoa học máy tính</span>
+                <span>15</span>
+            </div>
+            <div>
+                <span>Business Analytics</span>
+                <span>21</span>
+            </div>
+            <div>
+                <span>Hệ thống thông tin</span>
+                <span>21</span>
+            </div>
+            <div>
+                <span>Kinh tế luật</span>
+                <span>30</span>
+            </div>
+            <div>
+                <span>Marketing</span>
+                <span>45</span>
+            </div>
+            <div>
+                <span>Xây dựng</span>
+                <span>12</span>
+            </div>
+        </div>
+    </div>
+   </section>
+    <section class="footer">
+        <h4>About Us</h4>
+
+
+        <div class="icons">
+            <i class="fa-brands fa-facebook-f"></i>
+            <i class="fa-brands fa-instagram"></i>
+        </div>
+        <p>Sú Lê Lâm Thanh 2051052121</p>
+    </section>
+</body>
+
+
+<script src="https://cdn.jsdelivr.net/npm/lodash@4.17.21/lodash.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<script src="js/default.js"></script>
+
+</html>
